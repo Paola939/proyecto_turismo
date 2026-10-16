@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Centro de Tlaxiaco",
+    "categoria": "Cultura",
+    "descripcion": "Conoce el centro de la ciudad, sus espacios públicos y la vida cotidiana de la comunidad.",
+    "imagen": "https://picsum.photos/seed/tlaxiaco-centro/900/600",
+    "ubicacion": "Heroica Ciudad de Tlaxiaco, Oaxaca"
+  },
+  {
+    "id": 2,
+    "nombre": "Mercado municipal",
+    "categoria": "Gastronomía",
+    "descripcion": "Un lugar para conocer productos locales, ingredientes regionales y parte de la gastronomía mixteca.",
+    "imagen": "https://picsum.photos/seed/mercado-mixteca/900/600",
+    "ubicacion": "Tlaxiaco, Oaxaca"
+  },
+  {
+    "id": 3,
+    "nombre": "Paisajes de la Mixteca",
+    "categoria": "Naturaleza",
+    "descripcion": "Descubre paisajes de la región y disfruta de sus entornos naturales.",
+    "imagen": "https://picsum.photos/seed/mixteca-paisaje/900/600",
+    "ubicacion": "Región Mixteca, Oaxaca"
+  },
+  {
+    "id": 4,
+    "nombre": "Patrimonio cultural regional",
+    "categoria": "Historia",
+    "descripcion": "Acércate a las tradiciones y al patrimonio cultural de las comunidades de la región.",
+    "imagen": "https://picsum.photos/seed/cultura-oaxaca/900/600",
+    "ubicacion": "Región Mixteca, Oaxaca"
+  },
+  {
+    "id": 5,
+    "nombre": "Artesanías de la región",
+    "categoria": "Artesanía",
+    "descripcion": "Conoce el trabajo artesanal y los saberes transmitidos entre generaciones.",
+    "imagen": "https://picsum.photos/seed/artesania-mixteca/900/600",
+    "ubicacion": "Tlaxiaco y comunidades cercanas, Oaxaca"
+  },
+  {
+    "id": 6,
+    "nombre": "Rutas comunitarias",
+    "categoria": "Naturaleza",
+    "descripcion": "Explora opciones para conocer comunidades, paisajes y actividades de la región.",
+    "imagen": "https://picsum.photos/seed/ruta-mixteca/900/600",
+    "ubicacion": "Región Mixteca, Oaxaca"
+  }
+]
