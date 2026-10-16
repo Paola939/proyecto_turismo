@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../models/lugar.dart';
 import '../services/favoritos_service.dart';
 import '../widgets/barra_busqueda.dart';
-import '../widgets/chip_categoria.dart';
-import '../widgets/estado_vacio.dart';
+import '../widgets/categoria.dart';
+import '../widgets/estado.dart';
 import '../widgets/tarjeta_lugar.dart';
 import 'detalle_lugar_screen.dart';
 
@@ -28,8 +28,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
 
   List<String> get categorias {
     final categoriasUnicas =
-        widget.lugares.map((lugar) => lugar.categoria).toSet().toList()
-          ..sort();
+        widget.lugares.map((lugar) => lugar.categoria).toSet().toList()..sort();
 
     return ['Todos', ...categoriasUnicas];
   }
@@ -42,8 +41,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
         lugar.ubicacion,
       ].join(' ').toLowerCase();
 
-      final coincideTexto =
-          texto.contains(busqueda.trim().toLowerCase());
+      final coincideTexto = texto.contains(busqueda.trim().toLowerCase());
 
       final coincideCategoria =
           categoriaSeleccionada == 'Todos' ||
@@ -58,9 +56,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
     final resultados = lugaresFiltrados;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Lugares turísticos'),
-      ),
+      appBar: AppBar(title: const Text('Lugares turísticos')),
       body: Column(
         children: [
           Padding(
@@ -81,8 +77,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
               children: categorias.map((categoria) {
                 return ChipCategoria(
                   categoria: categoria,
-                  seleccionada:
-                      categoria == categoriaSeleccionada,
+                  seleccionada: categoria == categoriaSeleccionada,
                   onTap: () {
                     setState(() {
                       categoriaSeleccionada = categoria;
@@ -115,8 +110,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
                             MaterialPageRoute(
                               builder: (_) => DetalleLugarScreen(
                                 lugar: lugar,
-                                favoritosService:
-                                    widget.favoritosService,
+                                favoritosService: widget.favoritosService,
                               ),
                             ),
                           );
