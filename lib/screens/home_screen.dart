@@ -1,14 +1,33 @@
 import 'package:flutter/material.dart';
 
+import '../models/lugar.dart';
+import '../services/lugar_service.dart';
+import '../services/favoritos_service.dart';
 import '../widgets/boton_personalizado.dart';
+import 'lugares_screen.dart';
+import 'favoritos_screen.dart';
+import 'descripcion.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  final FavoritosService favoritosService;
 
-  void _mostrarMensaje(BuildContext context, String seccion) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('$seccion estará disponible próximamente.')),
-    );
+  const HomeScreen({super.key, required this.favoritosService});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  late final Future<List<Lugar>> _lugaresFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    _lugaresFuture = LugarService().cargarLugares();
+  }
+
+  void _abrirPantalla(BuildContext context, Widget pantalla) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => pantalla));
   }
 
   @override
@@ -63,7 +82,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
               const SizedBox(height: 28),
+
               const Text(
                 '¿Qué quieres descubrir?',
                 style: TextStyle(
@@ -72,30 +93,110 @@ class HomeScreen extends StatelessWidget {
                   color: Color(0xFF26352B),
                 ),
               ),
+
               const SizedBox(height: 16),
+
               _OpcionInicio(
                 icono: Icons.place_outlined,
                 titulo: 'Lugares turísticos',
                 descripcion: 'Explora destinos de la región.',
-                onTap: () => _mostrarMensaje(context, 'Lugares turísticos'),
+                onTap: () {
+                  _lugaresFuture
+                      .then((lugares) {
+                        if (!context.mounted) return;
+
+                        _abrirPantalla(
+                          context,
+                          LugaresScreen(
+                            lugares: lugares,
+                            favoritosService: widget.favoritosService,
+                          ),
+                        );
+                      })
+                      .catchError((error) {
+                        if (!context.mounted) return;
+
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'No se pudieron cargar los lugares turísticos.',
+                            ),
+                          ),
+                        );
+                      });
+                },
               ),
+
               _OpcionInicio(
                 icono: Icons.favorite_border,
                 titulo: 'Mis favoritos',
                 descripcion: 'Consulta los lugares que te gustan.',
-                onTap: () => _mostrarMensaje(context, 'Favoritos'),
+                onTap: () {
+                  _lugaresFuture
+                      .then((lugares) {
+                        if (!context.mounted) return;
+
+                        _abrirPantalla(
+                          context,
+                          FavoritosScreen(
+                            lugares: lugares,
+                            favoritosService: widget.favoritosService,
+                          ),
+                        );
+                      })
+                      .catchError((error) {
+                        if (!context.mounted) return;
+
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'No se pudieron cargar los favoritos.',
+                            ),
+                          ),
+                        );
+                      });
+                },
               ),
+
               _OpcionInicio(
                 icono: Icons.info_outline,
                 titulo: 'Acerca de la aplicación',
                 descripcion: 'Conoce el propósito de este proyecto.',
-                onTap: () => _mostrarMensaje(context, 'Acerca de'),
+                onTap: () {
+                  _abrirPantalla(context, const AcercaDeScreen());
+                },
               ),
+
               const SizedBox(height: 20),
+
               BotonPersonalizado(
                 texto: 'Comenzar a explorar',
                 icono: Icons.explore_outlined,
-                onPressed: () => _mostrarMensaje(context, 'Catálogo turístico'),
+                onPressed: () {
+                  _lugaresFuture
+                      .then((lugares) {
+                        if (!context.mounted) return;
+
+                        _abrirPantalla(
+                          context,
+                          LugaresScreen(
+                            lugares: lugares,
+                            favoritosService: widget.favoritosService,
+                          ),
+                        );
+                      })
+                      .catchError((error) {
+                        if (!context.mounted) return;
+
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'No se pudieron cargar los lugares turísticos.',
+                            ),
+                          ),
+                        );
+                      });
+                },
               ),
             ],
           ),

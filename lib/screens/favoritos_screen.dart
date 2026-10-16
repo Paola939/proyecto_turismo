@@ -16,6 +16,18 @@ class FavoritosScreen extends StatelessWidget {
     required this.favoritosService,
   });
 
+  void _abrirDetalle(BuildContext context, Lugar lugar) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DetalleLugarScreen(
+          lugar: lugar,
+          favoritosService: favoritosService,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +38,7 @@ class FavoritosScreen extends StatelessWidget {
           final favoritos = lugares
               .where((lugar) => favoritosService.esFavorito(lugar.id))
               .toList();
+
           if (favoritos.isEmpty) {
             return const EstadoVacio(
               icono: Icons.favorite_border,
@@ -33,23 +46,19 @@ class FavoritosScreen extends StatelessWidget {
               mensaje: 'Agrega lugares usando el corazón de cada tarjeta.',
             );
           }
+
           return ListView.builder(
             padding: const EdgeInsets.all(16),
             itemCount: favoritos.length,
             itemBuilder: (context, index) {
               final lugar = favoritos[index];
+
               return TarjetaLugar(
                 lugar: lugar,
                 favoritosService: favoritosService,
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => DetalleLugarScreen(
-                      lugar: lugar,
-                      favoritosService: favoritosService,
-                    ),
-                  ),
-                ),
+                onTap: () {
+                  _abrirDetalle(context, lugar);
+                },
               );
             },
           );

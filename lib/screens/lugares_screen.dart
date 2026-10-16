@@ -51,6 +51,18 @@ class _LugaresScreenState extends State<LugaresScreen> {
     }).toList();
   }
 
+  void _abrirDetalle(Lugar lugar) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DetalleLugarScreen(
+          lugar: lugar,
+          favoritosService: widget.favoritosService,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final resultados = lugaresFiltrados;
@@ -69,6 +81,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
               },
             ),
           ),
+
           SizedBox(
             height: 50,
             child: ListView(
@@ -87,7 +100,9 @@ class _LugaresScreenState extends State<LugaresScreen> {
               }).toList(),
             ),
           ),
+
           const SizedBox(height: 8),
+
           Expanded(
             child: resultados.isEmpty
                 ? const EstadoVacio(
@@ -104,17 +119,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
                       return TarjetaLugar(
                         lugar: lugar,
                         favoritosService: widget.favoritosService,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => DetalleLugarScreen(
-                                lugar: lugar,
-                                favoritosService: widget.favoritosService,
-                              ),
-                            ),
-                          );
-                        },
+                        onTap: () => _abrirDetalle(lugar),
                       );
                     },
                   ),
