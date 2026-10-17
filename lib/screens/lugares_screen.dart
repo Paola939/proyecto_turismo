@@ -68,7 +68,7 @@ class _LugaresScreenState extends State<LugaresScreen> {
     final resultados = lugaresFiltrados;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Lugares turísticos')),
+      appBar: AppBar(title: const Text('Lugares por visitar')),
       body: Column(
         children: [
           Padding(
