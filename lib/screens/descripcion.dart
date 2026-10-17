@@ -9,7 +9,7 @@ class AcercaDeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Descripcion de ')),
+      appBar: AppBar(title: const Text('Destalles de')),
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: [
