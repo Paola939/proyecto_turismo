@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../utils/constantes.dart';
 import '../widgets/boton_personalizado.dart';
 
@@ -8,20 +9,25 @@ class AcercaDeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Acerca de')),
+      appBar: AppBar(title: const Text('Descripcion de ')),
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: [
           const CircleAvatar(
             radius: 48,
             backgroundColor: ConstantesApp.verdeClaro,
-            child: Icon(Icons.travel_explore, size: 52, color: ConstantesApp.verde),
+            child: Icon(
+              Icons.travel_explore,
+              size: 52,
+              color: ConstantesApp.verde,
+            ),
           ),
           const SizedBox(height: 22),
           Text(
             ConstantesApp.nombreApp,
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.headlineSmall
+                ?.copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
           const Text(
