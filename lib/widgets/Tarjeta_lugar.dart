@@ -54,13 +54,13 @@ class TarjetaLugar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Categoría: ${lugar.categoria}',
+                    'Tipo de lugar: ${lugar.categoria}',
                     style: const TextStyle(
-                      color: Color(0xFF28664A),
-                      fontWeight: FontWeight.w600,
+                      color: Colors.blue,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   const SizedBox(height: 5),
                   Text(
                     lugar.nombre,
