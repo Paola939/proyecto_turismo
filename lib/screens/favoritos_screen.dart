@@ -43,7 +43,7 @@ class FavoritosScreen extends StatelessWidget {
             return const EstadoVacio(
               icono: Icons.favorite_border,
               titulo: 'Aún no tienes favoritos',
-              mensaje: 'Agrega lugares usando el corazón de cada tarjeta.',
+              mensaje: 'Agrega lugares usando el corazón de cada tarjeta que te guste.',
             );
           }
 
