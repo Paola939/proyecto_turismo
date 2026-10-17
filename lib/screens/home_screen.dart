@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         foregroundColor: Colors.white,
         title: const Text(
           'Explora Tlaxiaco',
+
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
