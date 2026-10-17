@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/lugar.dart';
 import '../services/favoritos_service.dart';
 import 'boton_favorito.dart';
@@ -52,24 +53,38 @@ class TarjetaLugar extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(lugar.categoria,
-                      style: const TextStyle(
-                        color: Color(0xFF28664A),
-                        fontWeight: FontWeight.w600,
-                      )),
+                  Text(
+                    'Categoría: ${lugar.categoria}',
+                    style: const TextStyle(
+                      color: Color(0xFF28664A),
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+
                   const SizedBox(height: 5),
-                  Text(lugar.nombre,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                            fontWeight: FontWeight.bold,
-                          )),
+                  Text(
+                    lugar.nombre,
+                    style: Theme.of(context).textTheme.titleLarge
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                  ),
                   const SizedBox(height: 6),
-                  Text(lugar.descripcion, maxLines: 2, overflow: TextOverflow.ellipsis),
+                  Text(
+                    lugar.descripcion,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                   const SizedBox(height: 8),
                   Row(
                     children: [
                       const Icon(Icons.location_on_outlined, size: 18),
                       const SizedBox(width: 4),
-                      Expanded(child: Text(lugar.ubicacion, maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      Expanded(
+                        child: Text(
+                          lugar.ubicacion,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                       const Icon(Icons.chevron_right),
                     ],
                   ),
