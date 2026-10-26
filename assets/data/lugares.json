@@ -1,18 +1,19 @@
+
 [
   {
     "id": 1,
     "nombre": "Centro de Tlaxiaco",
     "categoria": "Cultura",
     "descripcion": "Conoce el centro de la ciudad, sus espacios públicos y la vida cotidiana de la comunidad.",
-    "imagen": "https://picsum.photos/seed/tlaxiaco-centro/900/600",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Reloj_de_Tlaxiaco_Oaxaca.jpg?width=600",
     "ubicacion": "Heroica Ciudad de Tlaxiaco, Oaxaca"
   },
   {
     "id": 2,
-    "nombre": "Mercado municipal",
+    "nombre": "Gastronomía de Tlaxiaco",
     "categoria": "Gastronomía",
-    "descripcion": "Un lugar para conocer productos locales, ingredientes regionales y parte de la gastronomía mixteca.",
-    "imagen": "https://picsum.photos/seed/mercado-mixteca/900/600",
+    "descripcion": "Conoce las bebidas tradicionales y la gastronomía de la región.",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%ADcara_con_pulque.jpg?width=600",
     "ubicacion": "Tlaxiaco, Oaxaca"
   },
   {
@@ -20,7 +21,7 @@
     "nombre": "Paisajes de la Mixteca",
     "categoria": "Naturaleza",
     "descripcion": "Descubre paisajes de la región y disfruta de sus entornos naturales.",
-    "imagen": "https://picsum.photos/seed/mixteca-paisaje/900/600",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_de_Santiago_Nundichi.jpg?width=600",
     "ubicacion": "Región Mixteca, Oaxaca"
   },
   {
@@ -28,23 +29,24 @@
     "nombre": "Patrimonio cultural regional",
     "categoria": "Historia",
     "descripcion": "Acércate a las tradiciones y al patrimonio cultural de las comunidades de la región.",
-    "imagen": "https://picsum.photos/seed/cultura-oaxaca/900/600",
-    "ubicacion": "Región Mixteca, Oaxaca"
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Tlaxiaco1.jpg?width=600",
+    "ubicacion": "Tlaxiaco, Oaxaca"
   },
   {
     "id": 5,
-    "nombre": "Artesanías de la región",
-    "categoria": "Artesanía",
-    "descripcion": "Conoce el trabajo artesanal y los saberes transmitidos entre generaciones.",
-    "imagen": "https://picsum.photos/seed/artesania-mixteca/900/600",
-    "ubicacion": "Tlaxiaco y comunidades cercanas, Oaxaca"
+    "nombre": "Identidad cultural de Tlaxiaco",
+    "categoria": "Cultura",
+    "descripcion": "Conoce algunos de los símbolos y espacios representativos de Tlaxiaco.",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Tlaxiaco_Sign.jpg?width=600",
+    "ubicacion": "Tlaxiaco, Oaxaca"
   },
   {
     "id": 6,
     "nombre": "Rutas comunitarias",
     "categoria": "Naturaleza",
     "descripcion": "Explora opciones para conocer comunidades, paisajes y actividades de la región.",
-    "imagen": "https://picsum.photos/seed/ruta-mixteca/900/600",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_la_Ciudad_de_Tlaxiaco_Oaxaca.jpg?width=600",
     "ubicacion": "Región Mixteca, Oaxaca"
   }
 ]
+
