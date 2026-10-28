@@ -37,17 +37,17 @@ class _DescubreTlaxiacoAppState extends State<DescubreTlaxiacoApp> {
 
       theme: ThemeData(
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xFFF7F5EF),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 240, 239, 225),
 
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF28664A),
-          primary: const Color(0xFF28664A),
-          secondary: const Color(0xFFE3EBDD),
+          seedColor: const Color.fromARGB(255, 29, 53, 192),
+          primary: const Color.fromARGB(255, 94, 88, 185),
+          secondary: const Color.fromARGB(255, 29, 53, 192),
           surface: Colors.white,
         ),
 
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF28664A),
+          backgroundColor: Color.fromARGB(255, 70, 91, 184),
           foregroundColor: Colors.white,
           centerTitle: true,
           elevation: 0,
@@ -63,7 +63,7 @@ class _DescubreTlaxiacoAppState extends State<DescubreTlaxiacoApp> {
 
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF28664A),
+            backgroundColor: const Color.fromARGB(255, 68, 100, 204),
             foregroundColor: Colors.white,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             shape: RoundedRectangleBorder(

@@ -13,7 +13,7 @@ class FilaInformacion extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icono, color: const Color(0xFF28664A)),
+          Icon(icono, color: const Color.fromARGB(255, 70, 63, 173)),
           const SizedBox(width: 10),
           Expanded(child: Text(texto)),
         ],

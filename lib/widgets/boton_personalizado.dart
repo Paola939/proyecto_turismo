@@ -24,7 +24,7 @@ class BotonPersonalizado extends StatelessWidget {
         label: Text(texto),
         style: FilledButton.styleFrom(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-          backgroundColor: const Color(0xFF28664A),
+          backgroundColor: const Color.fromARGB(255, 22, 81, 207),
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),

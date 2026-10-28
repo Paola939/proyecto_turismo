@@ -20,7 +20,7 @@ class EstadoVacio extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icono, size: 58, color: Colors.grey),
+            Icon(icono, size: 58, color: const Color.fromARGB(255, 228, 39, 26)),
             const SizedBox(height: 12),
             Text(titulo, style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 8),

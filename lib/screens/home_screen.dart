@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF7F5EF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF28664A),
+        backgroundColor: const Color.fromARGB(255, 75, 91, 182),
         foregroundColor: Colors.white,
         title: const Text(
           'Explora Tlaxiaco',
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: double.infinity,
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFE3EBDD),
+                  color: const Color.fromARGB(255, 231, 199, 139),
                   borderRadius: BorderRadius.circular(22),
                 ),
                 child: const Column(
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Icon(
                       Icons.travel_explore,
                       size: 48,
-                      color: Color(0xFF28664A),
+                      color: Color.fromARGB(255, 59, 56, 185),
                     ),
                     SizedBox(height: 18),
                     Text(
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                         fontSize: 27,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF214B37),
+                        color: Color.fromARGB(255, 5, 5, 5),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF26352B),
+                  color: Color.fromARGB(255, 23, 21, 24),
                 ),
               ),
 
@@ -231,7 +231,7 @@ class _OpcionInicio extends StatelessWidget {
         contentPadding: const EdgeInsets.all(12),
         leading: CircleAvatar(
           backgroundColor: const Color(0xFFE3EBDD),
-          child: Icon(icono, color: const Color(0xFF28664A)),
+          child: Icon(icono, color: const Color.fromARGB(255, 42, 40, 187)),
         ),
         title: Text(
           titulo,

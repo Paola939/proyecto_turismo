@@ -37,7 +37,7 @@ class ImagenLugar extends StatelessWidget {
     return Container(
       height: altura,
       width: ancho ?? double.infinity,
-      color: const Color(0xFFE3EBDD),
+      color: const Color.fromARGB(255, 84, 67, 235),
       alignment: Alignment.center,
       child: const Icon(Icons.landscape, size: 56, color: Color(0xFF28664A)),
     );

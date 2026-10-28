@@ -19,7 +19,7 @@ class AcercaDeScreen extends StatelessWidget {
             child: Icon(
               Icons.travel_explore,
               size: 52,
-              color: ConstantesApp.verde,
+              color: Color.fromARGB(255, 120, 166, 218),
             ),
           ),
           const SizedBox(height: 22),
